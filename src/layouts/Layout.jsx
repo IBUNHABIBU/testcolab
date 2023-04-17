@@ -12,5 +12,5 @@ const Layout = (Component) => ({ ...props }) => (
   </div>
 );
 
-Layout.displayName = 'Layout';
+// Layout.displayName = 'Layout';
 export default Layout;
