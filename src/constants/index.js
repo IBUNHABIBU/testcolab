@@ -2,27 +2,27 @@ const list = [
   {
     id: 1,
     name: 'Home',
-    path: '/'
+    path: '/',
   },
   {
     id: 1,
     name: 'Intro',
-    path: '/intro'
+    path: '/intro',
   },
   {
     id: 2,
     name: 'Portfolio',
-    path: '/portfolio'
+    path: '/portfolio',
   },
   {
     id: 3,
     name: 'Contact',
-    path: '/contact'
+    path: '/contact',
   },
   {
     id: 4,
     name: 'Blog',
-    path: '/blog'
+    path: '/blog',
   },
 ];
 

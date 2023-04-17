@@ -3,20 +3,18 @@ import Navlink from 'react-router-dom';
 import list from '../constants';
 
 const Nav = () => (
-  <div>
-    <nav>
-      <ul>
-        {
-            list.map(({ id, name }) => (
-              <li key={id}>
-                {' '}
-                {name}
-                {' '}
-              </li>
-            ))
-        }
-      </ul>
-    </nav>
+  <div className="nav">
+    {
+      list.map((list) => (
+        <Navlink
+          to={list.path}
+          key={list.id}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          {list.name}
+        </Navlink>
+      ))
+    }
   </div>
 );
 
