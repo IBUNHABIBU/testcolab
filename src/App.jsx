@@ -3,7 +3,7 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 
 const AboutComponent = Layout(About);
-const c = Layout(Contact);
+const ContactComponent = Layout(Contact);
 
 
 function App() {
