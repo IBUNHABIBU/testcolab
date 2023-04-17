@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 // import App from './App';
 import './app.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Layout from './layouts';
+import layout from './layouts';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Home from './routes/Home';
 
-const AboutComponent = Layout(About);
+const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
 const HomeComponent = layout(Home);
 
