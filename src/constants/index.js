@@ -5,16 +5,6 @@ const list = [
     path: '/',
   },
   {
-    id: 1,
-    name: 'Intro',
-    path: '/intro',
-  },
-  {
-    id: 2,
-    name: 'Portfolio',
-    path: '/portfolio',
-  },
-  {
     id: 3,
     name: 'Contact',
     path: '/contact',
