@@ -1,4 +1,4 @@
-import Nav from './components/Nav';
+
 import Layout from './layouts/Layout';
 
 function App() {
