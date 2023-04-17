@@ -1,18 +1,18 @@
 import React from 'react';
-import { Navlink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import list from '../constants';
 
 const Nav = () => (
   <div className="nav">
     {
       list.map((list) => (
-        <Navlink
+        <NavLink
           to={list.path}
           key={list.id}
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
         >
           {list.name}
-        </Navlink>
+        </NavLink>
       ))
     }
   </div>

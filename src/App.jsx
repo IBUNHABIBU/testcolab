@@ -9,7 +9,7 @@ const ContactComponent = Layout(Contact);
 
 const router = createBrowserRouter(
   [
-    { path: '/', component: AboutComponent },
+    { path: '/', component: HomeComponent },
     { path: '/contact', component: ContactComponent },
     { path: '/about', component: AboutComponent },
   ],
