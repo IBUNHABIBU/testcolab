@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 // import App from './App';
 import './app.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Layout from './layouts/Layout';
+import Layout from './layouts';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Home from './routes/Home';
 
 const AboutComponent = Layout(About);
-const ContactComponent = Layout(Contact);
-const HomeComponent = Layout(Home);
+const ContactComponent = layout(Contact);
+const HomeComponent = layout(Home);
 
 const router = createBrowserRouter(
   [
@@ -19,7 +19,6 @@ const router = createBrowserRouter(
     { path: '/about', component: AboutComponent },
   ],
 );
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
