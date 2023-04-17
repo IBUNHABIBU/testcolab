@@ -1,9 +1,10 @@
 import Nav from './components/Nav';
+import Layout from './layouts/Layout';
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <Layout />
     </div>
   );
 }
