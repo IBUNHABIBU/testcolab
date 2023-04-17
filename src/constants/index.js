@@ -21,8 +21,8 @@ const list = [
   },
   {
     id: 4,
-    name: 'Blog',
-    path: '/blog',
+    name: 'About',
+    path: '/about',
   },
 ];
 
