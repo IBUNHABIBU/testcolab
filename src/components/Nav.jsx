@@ -4,7 +4,7 @@ import list from '../constants';
 
 const Nav = () => (
   <div className="nav">
-
+    <NavLink to="/" className="nav-link">Logo</NavLink>
     {
       list.map((list) => (
         <NavLink
