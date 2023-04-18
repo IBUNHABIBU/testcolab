@@ -4,9 +4,11 @@ const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
   const [projectData, setProjectData] = useState({
-    emai: '',
-    password: '',
-  })
+    title: '',
+    github: '',
+    demo: '',
+    languages: '',
+  });
   const handleClick = () => {
     setSkillsModal(true);
   };
