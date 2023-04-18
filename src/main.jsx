@@ -4,16 +4,16 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import layout from './layouts';
 import About from './routes/About';
 import Contact from './routes/Contact';
-import Home from './routes/Home';
 import Login from './routes/Login';
-// import App from './App';
 import './stylesheets/app.scss';
 import Skills from './routes/Skills';
+import Projects from './routes/Projects';
 
 const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
 const LoginComponent = layout(Login);
 const SkillsComponent = layout(Skills);
+const ProjectsComponent = layout(Projects);
 
 const router = createBrowserRouter(
   [
@@ -21,6 +21,7 @@ const router = createBrowserRouter(
     { path: '/contact', element: <ContactComponent /> },
     { path: '/login', element: <LoginComponent /> },
     { path: '/skills', element: <SkillsComponent /> },
+    { path: '/projects', element: <ProjectsComponent /> },
   ],
 );
 ReactDOM.createRoot(document.getElementById('root')).render(
