@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
   const [projectData, setProjectData] = useState({
     title: '',
     github: '',
