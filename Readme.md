@@ -1,0 +1,1 @@
+Ruby, Ruby on Rails, Javascript, React, React Native, PostgresQL, nginx, webpack, Heroku, Git, Github, Gitlab
