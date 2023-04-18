@@ -8,17 +8,19 @@ import Home from './routes/Home';
 import Login from './routes/Login';
 // import App from './App';
 import './stylesheets/app.scss';
+import Skills from './routes/Skills';
 
 const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
-const HomeComponent = layout(Home);
 const LoginComponent = layout(Login);
+const SkillsComponent = layout(Skills);
 
 const router = createBrowserRouter(
   [
     { path: '/', element: <AboutComponent /> },
     { path: '/contact', element: <ContactComponent /> },
     { path: '/login', element: <LoginComponent /> },
+    { path: '/skills', element: <SkillsComponent /> },
   ],
 );
 ReactDOM.createRoot(document.getElementById('root')).render(
