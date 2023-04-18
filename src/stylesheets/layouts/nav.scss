@@ -6,6 +6,7 @@
     align-items: center;
     background-color: $nav-background-color;
     padding: 0.6rem;
+    font-size: 24px;
 
     &__logo {
         margin-right: 20px;
@@ -18,26 +19,8 @@
         a {
             text-decoration: none;
             font-size: inherit;
-            position: relative;
-
-            &:hover {
-                &::before {
-                    transform: rotate(5deg);
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: -5px;
-                left: -5px;
-                right: -5px;
-                bottom: -5px;
-                background-color: #007bff;
-                z-index: -1;
-                transform: rotate(-5deg);
-                transition: transform 0.3s ease-out;
-            }
+            
+           
         }
     }
 

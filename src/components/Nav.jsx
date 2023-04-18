@@ -5,6 +5,7 @@ import list from '../constants';
 const Nav = () => (
   <div className="nav">
     <div className="nav__logo">
+      <span />
       <NavLink to="/" className="link">Engineer</NavLink>
     </div>
     <div className="nav__lists">
