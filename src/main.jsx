@@ -16,9 +16,8 @@ const LoginComponent = layout(Login);
 
 const router = createBrowserRouter(
   [
-    { path: '/', element: <HomeComponent /> },
+    { path: '/', element: <AboutComponent /> },
     { path: '/contact', element: <ContactComponent /> },
-    { path: '/about', element: <AboutComponent /> },
     { path: '/login', element: <LoginComponent /> },
   ],
 );
