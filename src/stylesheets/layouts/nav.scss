@@ -10,12 +10,21 @@
     &__logo {
         margin-right: 20px;
 
+        span {
+            font-weight: bold;
+            text-shadow: 1px 1px #ccc;
+        }
+
         a {
             text-decoration: none;
             font-size: inherit;
             position: relative;
 
-            &:
+            &:hover {
+                &::before {
+                    transform: rotate(5deg);
+                }
+            }
 
             &::before {
                 content: '';
