@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
+  const [projectData, setProjectData] = useState({
+    emai: '',
+    password: '',
+  })
   const handleClick = () => {
     setSkillsModal(true);
   };
