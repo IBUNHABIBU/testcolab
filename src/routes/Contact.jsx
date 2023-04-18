@@ -15,15 +15,12 @@ const Contacts = () => {
   };
   return (
     <div className="contact" id="contacts">
-      <div className="left">
-        <img src="/shake.svg" alt="" />
-      </div>
       <div className="right">
         <h2>Contact.</h2>
         <form onSubmit={sendEmail}>
           <input type="text" placeholder="Email" name="email" />
           <textarea placeholder="Message" name="message" />
-          <button type="submit">Send</button>
+          <button type="submit" className="btn">Send</button>
           {error && <span className="error"> Oops! Something went wrong, please try again.</span> }
           {message && <span>{message}</span> }
         </form>
