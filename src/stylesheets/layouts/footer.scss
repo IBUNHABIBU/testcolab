@@ -11,5 +11,17 @@
         text-decoration: none;
         margin-right: 10px;
         font-size: 24px;
+
+        a {
+            &:hover {
+                color: #004e8c;
+            }
+        }
+    }
+
+    &__contact {
+        margin-left: auto;
+        font-weight: bold;
+        text-shadow: 1px 1px #ccc;
     }
 }
