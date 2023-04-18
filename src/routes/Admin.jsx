@@ -9,6 +9,15 @@ const Admin = () => {
     demo: '',
     languages: '',
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProjectData((prevData) => {
+      ...prevData,
+      [name]: value,
+    });
+  };
+
   const handleClick = () => {
     setSkillsModal(true);
   };
@@ -52,13 +61,13 @@ const Admin = () => {
           <h3>Add Skill</h3>
           <form className="form">
             <label htmlFor="skill-name">Project title:</label>
-            <input type="text" id="skill-name" name="title" />
+            <input type="text" id="skill-name" name="title" onChange={handleChange}/>
             <label htmlFor="skill-name">Githb Link:</label>
-            <input type="text" id="skill-name" name="github" />
+            <input type="text" id="skill-name" name="github" onChange={handleChange}/>
             <label htmlFor="skill-name">Live Demo link:</label>
-            <input type="text" id="skill-name" name="demo" />
+            <input type="text" id="skill-name" name="demo" onChange={handleChange}/>
             <label htmlFor="skill-name">Languages used:</label>
-            <input type="text" id="skill-name" name="languages" />
+            <input type="text" id="skill-name" name="languages" onChange={handleChange}/>
             <button type="submit" className="btn">Add Skill</button>
           </form>
         </div>
