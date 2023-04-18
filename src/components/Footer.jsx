@@ -1,18 +1,16 @@
 import React from 'react';
 
 const Footer = () => (
-  <div>
-    <div class="nav">
-      <div class="nav__logo">
-        <a to="#" class="link">Logo</a>
+  <footer className="footer">
+      <div className="footer__social">
+        <a href="https://github.com" target="_blank"><FaGithub /></a>
+        <a href="https://twitter.com" target="_blank"><FaTwitter /></a>
+        <a href="https://linkedin.com" target="_blank"><FaLinkedin /></a>
       </div>
-      <div class="nav__lists">
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+      <div className="footer__contact">
+        <span>Phone: 555-555-5555</span>
       </div>
-    </div>
-  </div>
+    </footer>
 );
 
 export default Footer;
