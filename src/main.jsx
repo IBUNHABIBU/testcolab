@@ -8,12 +8,14 @@ import Login from './routes/Login';
 import './stylesheets/app.scss';
 import Skills from './routes/Skills';
 import Projects from './routes/Projects';
+import Admin from './routes/Admin';
 
 const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
 const LoginComponent = layout(Login);
 const SkillsComponent = layout(Skills);
 const ProjectsComponent = layout(Projects);
+const AdminComponent = layout(Admin);
 
 const router = createBrowserRouter(
   [
@@ -22,6 +24,7 @@ const router = createBrowserRouter(
     { path: '/login', element: <LoginComponent /> },
     { path: '/skills', element: <SkillsComponent /> },
     { path: '/projects', element: <ProjectsComponent /> },
+    { path: '/admin', element: <AdminComponent /> },
   ],
 );
 ReactDOM.createRoot(document.getElementById('root')).render(
