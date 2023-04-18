@@ -9,7 +9,7 @@ const Footer = () => (
       <a href="https://linkedin.com/in/salum-habibu" target="_blank" rel="noreferrer"><FaLinkedin /></a>
     </div>
     <div className="footer__contact">
-      <span>Phone: 555-555-5555</span>
+      <span>Phone: +255-752-443624</span>
     </div>
   </footer>
 );
