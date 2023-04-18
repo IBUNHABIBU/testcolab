@@ -4,8 +4,8 @@ import list from '../constants';
 
 const Nav = () => (
   <div className="nav">
-    <div className="logo">
-      <NavLink to="/" className="nav__link">Logo</NavLink>
+    <div className="nav__logo">
+      <NavLink to="/" className="link">Engineer</NavLink>
     </div>
     <div className="nav__lists">
       {
@@ -13,7 +13,7 @@ const Nav = () => (
           <NavLink
             to={list.path}
             key={list.id}
-            className={({ isActive }) => (isActive ? 'nav__link active' : 'nav__link')}
+            className={({ isActive }) => (isActive ? 'link link--active' : 'link')}
           >
             {list.name}
           </NavLink>
