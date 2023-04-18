@@ -12,11 +12,16 @@ const Admin = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setProjectData((prevData) => {
+    setProjectData((prevData) => ({
       ...prevData,
       [name]: value,
-    });
+    }));
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(projectData);
+  }
 
   const handleClick = () => {
     setSkillsModal(true);
@@ -59,7 +64,7 @@ const Admin = () => {
         <div className="modal__content">
           <span className="close" onClick={handleCloseProject}>&times;</span>
           <h3>Add Skill</h3>
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="skill-name">Project title:</label>
             <input type="text" id="skill-name" name="title" onChange={handleChange}/>
             <label htmlFor="skill-name">Githb Link:</label>
