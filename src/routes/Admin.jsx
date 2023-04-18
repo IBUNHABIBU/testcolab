@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
+  const [message, setMessage] = useState('')
   const [projectData, setProjectData] = useState({
     title: '',
     github: '',
@@ -21,13 +22,23 @@ const Admin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/projects', projectData).
-      then((res) => {
+    const formData = new FormData();
+    formData.append('title', projectData.title);
+    formData.append('github', projectData.github);
+    formData.append('demo', projectData.demo);
+    formData.append('languages', projectData.languages);
+
+    axios.post('http://localhost:3000/api/v1/projects', formData,
+      {
+        headers: { 'content-type': 'multipart/form-data' },
+        withCredentials: true,
+      })
+      .then((res) => {
         console.log(res);
       }).catch((err) => {
         console.log(err);
       });
-  }
+  };
 
   const handleClick = () => {
     setSkillsModal(true);
@@ -72,13 +83,13 @@ const Admin = () => {
           <h3>Add Skill</h3>
           <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="skill-name">Project title:</label>
-            <input type="text" id="skill-name" name="title" onChange={handleChange}/>
+            <input type="text" id="skill-name" name="title" onChange={handleChange} />
             <label htmlFor="skill-name">Githb Link:</label>
-            <input type="text" id="skill-name" name="github" onChange={handleChange}/>
+            <input type="text" id="skill-name" name="github" onChange={handleChange} />
             <label htmlFor="skill-name">Live Demo link:</label>
-            <input type="text" id="skill-name" name="demo" onChange={handleChange}/>
+            <input type="text" id="skill-name" name="demo" onChange={handleChange} />
             <label htmlFor="skill-name">Languages used:</label>
-            <input type="text" id="skill-name" name="languages" onChange={handleChange}/>
+            <input type="text" id="skill-name" name="languages" onChange={handleChange} />
             <button type="submit" className="btn">Add Skill</button>
           </form>
         </div>
