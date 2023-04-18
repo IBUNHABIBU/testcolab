@@ -9,11 +9,26 @@
 
     &__logo {
         margin-right: 20px;
-        font-weight: bolder;
 
         a {
             text-decoration: none;
-            color: white;
+            font-size: inherit;
+            position: relative;
+
+            &:
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                background-color: #007bff;
+                z-index: -1;
+                transform: rotate(-5deg);
+                transition: transform 0.3s ease-out;
+            }
         }
     }
 
