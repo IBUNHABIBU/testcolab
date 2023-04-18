@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const Admin = () => {
@@ -20,7 +21,12 @@ const Admin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(projectData);
+    axios.post('http://localhost:3000/projects', projectData).
+      then((res) => {
+        console.log(res);
+      }).catch((err) => {
+        console.log(err);
+      });
   }
 
   const handleClick = () => {
