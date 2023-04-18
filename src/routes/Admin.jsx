@@ -34,7 +34,7 @@ const Admin = () => {
               <label htmlFor="skill-name">Skill Name:</label>
               <input type="text" id="skill-name" name="skill-name" />
 
-              <button type="submit">Add Skill</button>
+              <button type="submit" className="btn">Add Skill</button>
             </form>
           </div>
         </div>
@@ -53,7 +53,7 @@ const Admin = () => {
             <input type="text" id="skill-name" name="demo" />
             <label htmlFor="skill-name">Languages used:</label>
             <input type="text" id="skill-name" name="languages" />
-            <button type="submit">Add Skill</button>
+            <button type="submit" className="btn">Add Skill</button>
           </form>
         </div>
       </div>
