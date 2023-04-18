@@ -5,9 +5,9 @@ import layout from './layouts';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Home from './routes/Home';
-// import App from './App';
-import './app.scss';
 import Login from './routes/Login';
+// import App from './App';
+import './stylesheets/app.scss';
 
 const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
