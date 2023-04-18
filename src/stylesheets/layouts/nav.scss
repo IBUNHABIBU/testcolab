@@ -12,9 +12,27 @@
     }
 
     &__lists {
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: inherit;
-        font-weight: bold;
+        a{
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: inherit;
+            font-weight: bold;
+
+            &:hover {
+                color: white;
+                background-color: #007bff;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+        }
+
+        .link {
+            &--active {
+                color: white;
+                background-color: #007bff;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+        }
     }
 }
