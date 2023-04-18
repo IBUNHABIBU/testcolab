@@ -34,9 +34,6 @@ const Admin = () => {
               <label htmlFor="skill-name">Skill Name:</label>
               <input type="text" id="skill-name" name="skill-name" />
 
-              <label htmlFor="skill-level">Skill Level:</label>
-              <input type="range" id="skill-level" name="skill-level" min="1" max="5" />
-
               <button type="submit">Add Skill</button>
             </form>
           </div>
@@ -48,12 +45,14 @@ const Admin = () => {
           <span className="close" onClick={handleCloseProject}>&times;</span>
           <h3>Add Skill</h3>
           <form>
-            <label htmlFor="skill-name">Skill Name:</label>
-            <input type="text" id="skill-name" name="skill-name" />
-
-            <label htmlFor="skill-level">Skill Level:</label>
-            <input type="range" id="skill-level" name="skill-level" min="1" max="5" />
-
+            <label htmlFor="skill-name">Project title:</label>
+            <input type="text" id="skill-name" name="title" />
+            <label htmlFor="skill-name">Githb Link:</label>
+            <input type="text" id="skill-name" name="github" />
+            <label htmlFor="skill-name">Live Demo:</label>
+            <input type="text" id="skill-name" name="demo" />
+            <label htmlFor="skill-name">Languages used:</label>
+            <input type="text" id="skill-name" name="languages" />
             <button type="submit">Add Skill</button>
           </form>
         </div>
