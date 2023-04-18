@@ -9,6 +9,12 @@
 
     &__logo {
         margin-right: 20px;
+        font-weight: bolder;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 
     &__lists {
@@ -29,7 +35,7 @@
         .link {
             &--active {
                 color: white;
-                background-color: #17a2b8;
+                background-color: #007bff;
                 border-radius: 5px;
                 padding: 5px 10px;
             }
