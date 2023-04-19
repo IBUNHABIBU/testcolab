@@ -17,4 +17,18 @@
         object-fit: cover;
         border-radius: 10px;
     }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 10px;
+
+        &__title {
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+        }
+    }
 }
