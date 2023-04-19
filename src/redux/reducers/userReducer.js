@@ -1,8 +1,6 @@
 import actionTypes from '../constants/index';
 
-const initialState = {
-
-};
+const initialState = {};
 
 const userReducer = (state = initialState, { type, payload }) => {
   switch (type) {
