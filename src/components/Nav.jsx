@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import list from '../constants';
+import { checkUser } from '../redux/actions/fetch';
 
 const Nav = () => {
   useEffect(() => {
