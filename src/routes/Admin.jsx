@@ -8,7 +8,7 @@ const Admin = () => {
   const [projectModal, setProjectModal] = useState(false);
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
-  const [skills, setSkills] = useState('')
+  const [skills, setSkills] = useState('');
   const [projectData, setProjectData] = useState({
     title: '',
     github: '',
@@ -31,9 +31,9 @@ const Admin = () => {
       }));
     }
   };
-   const handleSkills = (e) => {
+  const handleSkills = (e) => {
     setSkills(e.target.value);
-   }
+  };
 
   const submitSkills = (e) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ const Admin = () => {
           dispatch(addSkills(res.data));
         }
       });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
