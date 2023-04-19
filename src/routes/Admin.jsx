@@ -34,7 +34,7 @@ const Admin = () => {
     }
   };
   const handleSkills = (e) => {
-    setSkills({name: e.target.value });
+    setSkills({ name: e.target.value });
   };
 
   const submitSkills = (e) => {

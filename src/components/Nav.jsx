@@ -26,8 +26,8 @@ const Nav = () => {
       });
   };
 
-  if(!user.logged_in){
-    navigate('/')
+  if (!user.logged_in) {
+    navigate('/');
   }
   return (
     <div className="nav">

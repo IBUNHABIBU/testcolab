@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { urlBase } from '../redux/actions/fetch';
 import { setUser } from '../redux/actions/actions';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const user = useSelector((state) => state.user);
