@@ -12,6 +12,13 @@ export const createProject = () => async (dispatch) => {
   dispatch(addProject(response.data));
 };
 
+export const createSkills = () => async (dispatch) => {
+  const response = await axios.get(`${urlBase}/api/v1/projects`, {
+    withCredentials: true,
+  });
+  dispatch(addSkills(response.data));
+};
+
 export const fetchProjects = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/projects`);
   dispatch(addProject(response.data));

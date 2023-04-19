@@ -8,6 +8,7 @@ const Admin = () => {
   const [projectModal, setProjectModal] = useState(false);
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
+  const [skills, setSkills] = useState('')
   const [projectData, setProjectData] = useState({
     title: '',
     github: '',
@@ -30,6 +31,23 @@ const Admin = () => {
       }));
     }
   };
+   const handleSkills = (e) => {
+    setSkills(e.target.value);
+   }
+
+  const submitSkills = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:3000/api/v1/skills', { skill: { name: skills } },
+      {
+        withCredentials: true,
+      })
+      .then((res) => {
+        if (res.data.status === 'created') {
+          setSkillsModal(false);
+          dispatch(addSkills(res.data));
+        }
+      });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,9 +99,9 @@ const Admin = () => {
           <div className="modal__content">
             <span className="close" onClick={handleCloseModal}>&times;</span>
             <h3>Add Skill</h3>
-            <form className="form">
-              <label htmlFor="skill-name">Skill Name:</label>
-              <input type="text" id="skill-name" name="skill-name" />
+            <form className="form" onSubmit={submitSkills}>
+              <label htmlFor="skill-name" onChange={handleSkills}>Skill Name:</label>
+              <input type="text" id="skill-name" name="skill-name" onChange={handleSkills} />
 
               <button type="submit" className="btn">Add Skill</button>
             </form>

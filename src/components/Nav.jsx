@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 import { checkUser, urlBase } from '../redux/actions/fetch';
 import list from '../constants';
 import { setUser } from '../redux/actions/actions';
-import axios from 'axios';
 
 const Nav = () => {
   const user = useSelector((state) => state.user);
@@ -13,7 +13,7 @@ const Nav = () => {
   useEffect(() => {
     checkUser();
   }, []);
-  if(!user.logged_in) {
+  if (!user.logged_in) {
     filteredList = list.filter((list) => list.name !== 'Admin Panel');
   } else {
     filteredList = list;
@@ -43,7 +43,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-      { user.logged_in && (<button type="submit" className="btn" onClick={handleLogout}>Logout</button>)}
+        { user.logged_in && (<button type="submit" className="btn" onClick={handleLogout}>Logout</button>)}
       </div>
     </div>
   );

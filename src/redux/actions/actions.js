@@ -5,6 +5,11 @@ export const addProject = (data) => ({
   payload: data,
 });
 
+export const addSkills = (data) => ({
+  type: actionTypes.ADD_SKILLS,
+  payload: data,
+});
+
 export const setUser = (user) => ({
   type: actionTypes.SET_USER,
   payload: user,
