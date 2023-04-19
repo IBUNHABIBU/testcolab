@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProject } from '../redux/actions/actions';
 import AddProject from '../components/AddProject';
+import AddSkills from '../components/AddSkills';
 
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
-  
-
 
   const handleClick = () => {
     setSkillsModal(true);
@@ -31,7 +30,7 @@ const Admin = () => {
       </div>
 
       {skillsModal && (
-        
+        <AddSkills />
       )}
       {projectModal && (
         <AddProject />
