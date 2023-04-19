@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import list from '../constants';
 
-const Nav = () => (
+const Nav = () => {(
   <div className="nav">
     <div className="nav__logo">
       <span />
@@ -22,6 +22,6 @@ const Nav = () => (
       }
     </div>
   </div>
-);
+)};
 
 export default Nav;
