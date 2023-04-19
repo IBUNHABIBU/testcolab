@@ -35,9 +35,11 @@ const Admin = () => {
         withCredentials: true,
       })
       .then((res) => {
-        console.log(res);
-      }).catch((err) => {
-        console.log(err);
+        if (res.data.status === 'created') {
+          setMessage('Project added successfully');
+          setProjectModal(false);
+          dispatch(addProject(res.data));
+        }
       });
   };
 
