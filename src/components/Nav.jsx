@@ -4,7 +4,7 @@ import list from '../constants';
 
 const Nav = () => {
   useEffect(() => {
-    checkAdmin()
+    checkUser()
   }, []);
   return (
   <div className="nav">
