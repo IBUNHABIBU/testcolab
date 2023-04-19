@@ -1,4 +1,7 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import { urlBase } from '../redux/actions/fetch';
+import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const [userInput, setuserInput] = useState({
@@ -8,10 +11,25 @@ const Login = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setuserInput((prevUserInput) => ({
-      ...userInput,
+      ...prevUserInput,
       [name]: value,
     }));
 
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      axios.post(`${urlBase}/sessions`, {
+        user: {
+          email: userInput.email,
+          password: userInput.password,
+        },
+      },
+      { withCredentials: true }).then((response) => {
+        if (response.data.status === 'created') {
+          dispatch(setUser(response.data));
+        }
+        setErrors(response.data.error);
+      });
+    }
     
   };
   (
