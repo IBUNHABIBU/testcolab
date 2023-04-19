@@ -1,30 +1,23 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
-import {
-  redirect, useHistory,
-} from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import { urlBase } from '../redux/actions/fetch';
 import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const user = useSelector((state) => state.user);
   const history = useHistory();
-  console.log('user', user.logged_in);
   if (user.logged_in) {
-    // return redirect('/admin');
     history.push('/admin');
   }
-  
+
   const dispatch = useDispatch();
-  const [errors, setErrors] = useState('');
   const [userInput, setuserInput] = useState({
     email: '',
     password: '',
   });
 
-  console.log('user', user);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setuserInput((prevUserInput) => ({
@@ -45,8 +38,6 @@ const Login = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
       }
-      console.log('response', response);
-      setErrors(response.data.error);
     });
   };
   return (
