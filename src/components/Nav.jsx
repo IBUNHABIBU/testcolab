@@ -35,6 +35,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
+      <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
       </div>
     </div>
   );
