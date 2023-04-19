@@ -1,15 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { urlBase } from '../redux/actions/fetch';
 import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const user = useSelector((state) => state.user);
-  const history = useHistory();
+  const navigate = useNavigate();
   if (user.logged_in) {
-    history.push('/admin');
+    navigate('/admin');
   }
 
   const dispatch = useDispatch();
