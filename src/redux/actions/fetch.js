@@ -15,7 +15,7 @@ export const createProject = () => async (dispatch) => {
 export const fetchProjects = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/projects`);
   dispatch(addProject(response.data));
-  console.log("Fetched");
+  console.log('Fetched');
 };
 
 export const checkUser = () => async (dispatch) => {

@@ -2,16 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import list from '../constants';
 
-const Nav = () => {
- 
-  return (
-    <div className="nav">
-      <div className="nav__logo">
-        <span />
-        <NavLink to="/" className="link">Engineer</NavLink>
-      </div>
-      <div className="nav__lists">
-        {
+const Nav = () => (
+  <div className="nav">
+    <div className="nav__logo">
+      <span />
+      <NavLink to="/" className="link">Engineer</NavLink>
+    </div>
+    <div className="nav__lists">
+      {
         list.map((list) => (
           <NavLink
             to={list.path}
@@ -22,9 +20,8 @@ const Nav = () => {
           </NavLink>
         ))
       }
-      </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Nav;
