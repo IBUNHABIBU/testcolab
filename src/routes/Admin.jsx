@@ -1,7 +1,4 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addProject } from '../redux/actions/actions';
 import AddProject from '../components/AddProject';
 import AddSkills from '../components/AddSkills';
 
