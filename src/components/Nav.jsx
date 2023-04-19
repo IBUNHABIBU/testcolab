@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import list from '../constants';
 import { checkUser } from '../redux/actions/fetch';
-import { useSelector } from 'react-redux';
 
 const Nav = () => {
   const admin = useSelector((state) => state.user);
   console.log(admin);
   useEffect(() => {
     checkUser();
-    console.log("use effect");
+    console.log('use effect');
   }, []);
   return (
     <div className="nav">
