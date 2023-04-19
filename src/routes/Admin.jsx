@@ -32,7 +32,7 @@ const Admin = () => {
     formData.append('project[demo]', projectData.demo);
     formData.append('project[languages]', projectData.languages);
     formData.append('project[screenshot]', projectData.screenshot);
-    console.log(e.target.screenshot.files[0]);
+    console.log(formData, projectData);
 
     axios.post('http://localhost:3000/api/v1/projects', formData,
       {
