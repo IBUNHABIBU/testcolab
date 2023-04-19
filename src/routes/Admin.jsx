@@ -1,14 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProject } from '../redux/actions/actions';
+import { addProject, addSkills } from '../redux/actions/actions';
 
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
-  const [skills, setSkills] = useState('');
+  const [skills, setSkills] = useState({
+    name: '',
+  });
   const [projectData, setProjectData] = useState({
     title: '',
     github: '',
@@ -32,12 +34,12 @@ const Admin = () => {
     }
   };
   const handleSkills = (e) => {
-    setSkills(e.target.value);
+    setSkills({name: e.target.value });
   };
 
   const submitSkills = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/api/v1/skills', { skill: { name: skills } },
+    axios.post('http://localhost:3000/api/v1/skills', { name: skills.name },
       {
         withCredentials: true,
       })

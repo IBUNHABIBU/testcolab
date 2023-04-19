@@ -1,6 +1,16 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProjects } from '../redux/actions/fetch';
 
-const Skills = () => (
+const Skills = () => {
+  const skills = useSelector((state) => state.skill);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSkills());
+  }, []);
+
+  return (
   <div className="skills">
     <h2 className="skills__title">Skills</h2>
     <ul className="skills__list">
@@ -10,7 +20,7 @@ const Skills = () => (
       <li className="skills__list__item">React</li>
       <li className="skills__list__item">Node.js</li>
     </ul>
-  </div>
-);
+  </div>)
+)};
 
 export default Skills;

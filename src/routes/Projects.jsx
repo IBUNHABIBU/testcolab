@@ -4,7 +4,6 @@ import { fetchProjects } from '../redux/actions/fetch';
 
 const Projects = () => {
   const projects = useSelector((state) => state.project);
-  console.log(projects);
   const dispatch = useDispatch();
 
   useEffect(() => {

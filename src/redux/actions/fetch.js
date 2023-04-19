@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  addProject, setUser,
+  addProject, addSkills, setUser,
 } from './actions';
 // export const urlBase = 'https://colapi.darlive.cyou';
 export const urlBase = 'http://localhost:3000';
@@ -13,7 +13,7 @@ export const createProject = () => async (dispatch) => {
 };
 
 export const createSkills = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/projects`, {
+  const response = await axios.get(`${urlBase}/api/v1/skills`, {
     withCredentials: true,
   });
   dispatch(addSkills(response.data));
@@ -22,7 +22,11 @@ export const createSkills = () => async (dispatch) => {
 export const fetchProjects = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/projects`);
   dispatch(addProject(response.data));
-  console.log('Fetched');
+};
+
+export const fetchSkills = () => async (dispatch) => {
+  const response = await axios.get(`${urlBase}/api/v1/skills`);
+  dispatch(addSkills(response.data));
 };
 
 export const checkUser = () => async (dispatch) => {
