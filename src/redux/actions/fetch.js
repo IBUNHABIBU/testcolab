@@ -18,8 +18,11 @@ export const fetchProjects = () => async (dispatch) => {
 };
 
 export const checkUser = () => async (dispatch) => {
+  
+  console.log("response", response.data);
   const response = await axios.get(`${urlBase}/logged_in`, {
     withCredentials: true, mode: 'no-cors',
   });
   dispatch(setUser(response.data));
+  console.log("response", response.data);
 };
