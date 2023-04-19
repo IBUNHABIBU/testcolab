@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addProject } from '../redux/actions/actions';
@@ -13,6 +13,10 @@ const AddProject = () => {
     languages: '',
     screenshot: null,
   });
+
+  const handleCloseProject = () => {
+    setProjectModal(false);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,7 +51,6 @@ const AddProject = () => {
       .then((res) => {
         if (res.data.status === 'created') {
           setMessage('Project added successfully');
-          setProjectModal(false);
           dispatch(addProject(res.data));
         }
       });
