@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import list from '../constants';
 
-const Nav = () => {(
+const Nav = () => {
+  useEffect(() => {
+    checkAdmin()
+  }, []);
+  return (
   <div className="nav">
     <div className="nav__logo">
       <span />
