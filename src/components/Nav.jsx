@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { checkUser, urlBase } from '../redux/actions/fetch';
@@ -9,6 +9,7 @@ import { setUser } from '../redux/actions/actions';
 const Nav = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   let filteredList;
   useEffect(() => {
     checkUser();
@@ -25,6 +26,9 @@ const Nav = () => {
       });
   };
 
+  if(!user.logged_in){
+    navigate('/')
+  }
   return (
     <div className="nav">
       <div className="nav__logo">
