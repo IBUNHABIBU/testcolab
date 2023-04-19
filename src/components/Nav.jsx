@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import list from '../constants';
-import { checkUser } from '../redux/actions/fetch';
 
 const Nav = () => {
-  const admin = useSelector((state) => state.user);
-  console.log(admin);
-  useEffect(() => {
-    checkUser();
-    console.log('use effect');
-  }, []);
+ 
   return (
     <div className="nav">
       <div className="nav__logo">
