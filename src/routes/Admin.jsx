@@ -13,15 +13,22 @@ const Admin = () => {
     github: '',
     demo: '',
     languages: '',
-    screenshot: '',
+    screenshot: null,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if(name === 'screenshot') {
+      setProjectData((prevData) => ({
+        ...prevData,
+        [name]: e.target.files[0],
+      }));
+    } else {
     setProjectData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+    }
   };
 
   const handleSubmit = (e) => {
