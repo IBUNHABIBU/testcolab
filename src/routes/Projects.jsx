@@ -25,8 +25,8 @@ const Projects = () => {
               <div className="project__details">
                 <h3 className="project__details__title">{title}</h3>
                 <div className="project__details__links">
-                  <a href={demo} target="_blank" className="link" rel="noreferrer">live demo</a>
-                  <a href={github} target="_blank" className="link" rel="noreferrer">github link</a>
+                  <a href={demo} target="_blank" className="btn link" rel="noreferrer">live demo</a>
+                  <a href={github} target="_blank" className="btn link" rel="noreferrer">github link</a>
                 </div>
                 <p className="project__details__language">{languages}</p>
               </div>

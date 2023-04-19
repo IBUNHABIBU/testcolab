@@ -30,5 +30,21 @@
             margin: 0;
             text-align: center;
         }
+
+        &__links {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+
+            .link {
+                text-decoration: none;
+            }
+        }
+
+        &__language {
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+        }
     }
 }
