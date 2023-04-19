@@ -5,7 +5,7 @@ import { fetchSkills } from '../redux/actions/fetch';
 const Skills = () => {
   const skills = useSelector((state) => state.skills);
   const dispatch = useDispatch();
-
+  console.log(skills);
   useEffect(() => {
     dispatch(fetchSkills());
   }, []);
@@ -13,17 +13,17 @@ const Skills = () => {
   return (
     <div className="skills">
       <h2 className="skills__title">Skills</h2>
-      {
+
+      <ul className="skills__list">
+        {
         skills.map((skill) => {
-          const { id, name } = skill;
+          const { id, title } = skill;
           return (
-            <ul className="skills__list" key={id}>
-              <li className="skills__list__item">{name}</li>
-            </ul>
+            <li className="skills__list__item" key={id}>{title}</li>
           );
         })
       }
-
+      </ul>
     </div>
   );
 };
