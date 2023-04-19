@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import layout from './layouts';
 import About from './routes/About';
 import Contact from './routes/Contact';
@@ -9,6 +10,7 @@ import './stylesheets/app.scss';
 import Skills from './routes/Skills';
 import Projects from './routes/Projects';
 import Admin from './routes/Admin';
+import store from './redux/store';
 
 const AboutComponent = layout(About);
 const ContactComponent = layout(Contact);
@@ -29,6 +31,8 @@ const router = createBrowserRouter(
 );
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 );

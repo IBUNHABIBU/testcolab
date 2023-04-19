@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProject } from '../redux/actions/actions';
 
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
@@ -24,10 +26,10 @@ const Admin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('title', projectData.title);
-    formData.append('github', projectData.github);
-    formData.append('demo', projectData.demo);
-    formData.append('languages', projectData.languages);
+    formData.append('project[title]', projectData.title);
+    formData.append('project[github]', projectData.github);
+    formData.append('project[demo]', projectData.demo);
+    formData.append('project[languages]', projectData.languages);
 
     axios.post('http://localhost:3000/api/v1/projects', formData,
       {
