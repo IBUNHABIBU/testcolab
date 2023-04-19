@@ -3,10 +3,10 @@ import {
   addProject,
 } from './actions';
 // export const urlBase = 'https://colapi.darlive.cyou';
-export const urlBase = 'http://localhost:3000/api/v1/projects';
+export const urlBase = 'http://localhost:3000';
 
 export const createProject = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/projectss`, {
+  const response = await axios.get(`${urlBase}/api/v1/projects`, {
     withCredentials: true,
   });
   dispatch(addProject(response.data));
