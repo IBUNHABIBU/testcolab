@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { checkUser } from '../redux/actions/fetch';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkUser, urlBase } from '../redux/actions/fetch';
 import list from '../constants';
+import { setUser } from '../redux/actions/actions';
+import axios from 'axios';
 
 const Nav = () => {
   const user = useSelector((state) => state.user);
-  console.log(user);
+  const dispatch = useDispatch();
   let filteredList;
   useEffect(() => {
     checkUser();
@@ -16,6 +18,13 @@ const Nav = () => {
   } else {
     filteredList = list;
   }
+  const handleLogout = () => {
+    axios.delete(`${urlBase}/logout`, { withCredentials: true })
+      .then((response) => {
+        dispatch(setUser(response.data));
+      });
+  };
+
   return (
     <div className="nav">
       <div className="nav__logo">
@@ -24,7 +33,6 @@ const Nav = () => {
       </div>
       <div className="nav__lists">
         {
-          
         filteredList.map((list) => (
           <NavLink
             to={list.path}
@@ -35,7 +43,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-      <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
+      { user.logged_in && (<button type="submit" className="btn" onClick={handleLogout}>Logout</button>)}
       </div>
     </div>
   );
