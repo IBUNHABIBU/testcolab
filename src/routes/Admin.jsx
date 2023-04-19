@@ -18,16 +18,16 @@ const Admin = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if(name === 'screenshot') {
+    if (name === 'screenshot') {
       setProjectData((prevData) => ({
         ...prevData,
         [name]: e.target.files[0],
       }));
     } else {
-    setProjectData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+      setProjectData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
     }
   };
 
