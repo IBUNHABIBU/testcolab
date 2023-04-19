@@ -33,7 +33,7 @@ const Nav = () => {
     <div className="nav">
       <div className="nav__logo">
         <span />
-        <NavLink to="/" className="link">Engineer</NavLink>
+        <NavLink to="/" className="link">Salum Habibu</NavLink>
       </div>
       <div className="nav__lists">
         {

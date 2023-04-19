@@ -2,8 +2,8 @@ import axios from 'axios';
 import {
   addProject, addSkills, setUser,
 } from './actions';
-// export const urlBase = 'https://colapi.darlive.cyou';
-export const urlBase = 'http://localhost:3000';
+export const urlBase = 'https://car.darlive.cyou';
+// export const urlBase = 'http://localhost:3000';
 
 export const createProject = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/projects`, {

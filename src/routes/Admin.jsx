@@ -2,11 +2,11 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProject, addSkills } from '../redux/actions/actions';
+import { urlBase } from '../redux/actions/fetch';
 
 const Admin = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
-  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
   const [skills, setSkills] = useState({
     name: '',
@@ -39,7 +39,7 @@ const Admin = () => {
 
   const submitSkills = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/api/v1/skills', { name: skills.name },
+    axios.post(`${urlBase}/api/v1/skills`, { name: skills.name },
       {
         withCredentials: true,
       })
@@ -60,7 +60,7 @@ const Admin = () => {
     formData.append('project[languages]', projectData.languages);
     formData.append('project[screenshot]', projectData.screenshot);
 
-    axios.post('http://localhost:3000/api/v1/projects', formData,
+    axios.post(`${urlBase}/api/v1/projects`, formData,
       {
         headers: { 'content-type': 'multipart/form-data' },
         withCredentials: true,
