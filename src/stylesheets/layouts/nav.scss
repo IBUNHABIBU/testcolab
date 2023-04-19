@@ -30,7 +30,7 @@
 
             &:hover {
                 color: white;
-                background-color: #007bff;
+                background-color: $hover-color;
                 border-radius: 5px;
                 padding: 5px 10px;
             }
@@ -39,7 +39,7 @@
         .link {
             &--active {
                 color: white;
-                background-color: #007bff;
+                background-color: $hover-color;
                 border-radius: 5px;
                 padding: 5px 10px;
             }
