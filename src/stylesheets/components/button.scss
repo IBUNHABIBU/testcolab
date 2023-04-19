@@ -1,5 +1,5 @@
 .btn {
-    background-color: #0000FF;
+    background-color: $secondary-color;
     color: white;
     border: none;
     border-radius: 5px;
@@ -10,6 +10,6 @@
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-        background-color: #0077FF;
+        background-color: $hover-color;
     }
 }
