@@ -21,9 +21,7 @@ const Admin = () => {
   const handleCloseModal = () => {
     setSkillsModal(false);
   };
-  const handleCloseProject = () => {
-    setProjectModal(false);
-  };
+  
   return (
     <div className="admin">
       <h2>Admin Panel</h2>
@@ -33,18 +31,7 @@ const Admin = () => {
       </div>
 
       {skillsModal && (
-        <div className="modal">
-          <div className="modal__content">
-            <span className="close" onClick={handleCloseModal}>&times;</span>
-            <h3>Add Skill</h3>
-            <form className="form">
-              <label htmlFor="skill-name">Skill Name:</label>
-              <input type="text" id="skill-name" name="skill-name" />
-
-              <button type="submit" className="btn">Add Skill</button>
-            </form>
-          </div>
-        </div>
+        
       )}
       {projectModal && (
         <AddProject />
