@@ -30,6 +30,7 @@ const Admin = () => {
     formData.append('project[github]', projectData.github);
     formData.append('project[demo]', projectData.demo);
     formData.append('project[languages]', projectData.languages);
+    formData.append('project[screenshot]', projectData.screenshot);
 
     axios.post('http://localhost:3000/api/v1/projects', formData,
       {
@@ -95,6 +96,8 @@ const Admin = () => {
             <input type="text" id="skill-name" name="demo" onChange={handleChange} />
             <label htmlFor="skill-name">Languages used:</label>
             <input type="text" id="skill-name" name="languages" onChange={handleChange} />
+            <label htmlFor="skill-name"> Project Screenshot:</label>
+            <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
             <button type="submit" className="btn">Add Skill</button>
           </form>
         </div>
