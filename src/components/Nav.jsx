@@ -5,16 +5,16 @@ import { checkUser } from '../redux/actions/fetch';
 
 const Nav = () => {
   useEffect(() => {
-    checkUser()
+    checkUser();
   }, []);
   return (
-  <div className="nav">
-    <div className="nav__logo">
-      <span />
-      <NavLink to="/" className="link">Engineer</NavLink>
-    </div>
-    <div className="nav__lists">
-      {
+    <div className="nav">
+      <div className="nav__logo">
+        <span />
+        <NavLink to="/" className="link">Engineer</NavLink>
+      </div>
+      <div className="nav__lists">
+        {
         list.map((list) => (
           <NavLink
             to={list.path}
@@ -25,8 +25,9 @@ const Nav = () => {
           </NavLink>
         ))
       }
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 export default Nav;
