@@ -28,7 +28,7 @@ const Projects = () => {
                   <a href={demo} target="_blank" className="btn link" rel="noreferrer">live demo</a>
                   <a href={github} target="_blank" className="btn link" rel="noreferrer">github link</a>
                 </div>
-                <p className="project__details__language">{languages}</p>
+                <p className="project__details__language"><strong>Built with: </strong>{languages}</p>
               </div>
             </div>
           );
