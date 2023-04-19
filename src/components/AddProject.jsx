@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const AddProject = () => {
-    const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('');
   const dispatch = useDispatch();
   const [projectData, setProjectData] = useState({
     title: '',
@@ -10,7 +10,7 @@ const AddProject = () => {
     languages: '',
     screenshot: null,
   });
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === 'screenshot') {
@@ -50,26 +50,29 @@ const AddProject = () => {
       });
   };
   return (
-    <div> <div className="modal">
-    <div className="modal__content">
-      <span className="close" onClick={handleCloseProject}>&times;</span>
-      <h3>Add Skill</h3>
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="skill-name">Project title:</label>
-        <input type="text" id="skill-name" name="title" onChange={handleChange} />
-        <label htmlFor="skill-name">Githb Link:</label>
-        <input type="text" id="skill-name" name="github" onChange={handleChange} />
-        <label htmlFor="skill-name">Live Demo link:</label>
-        <input type="text" id="skill-name" name="demo" onChange={handleChange} />
-        <label htmlFor="skill-name">Languages used:</label>
-        <input type="text" id="skill-name" name="languages" onChange={handleChange} />
-        <label htmlFor="skill-name"> Project Screenshot:</label>
-        <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
-        <button type="submit" className="btn">Add Skill</button>
-      </form>
+    <div>
+      {' '}
+      <div className="modal">
+        <div className="modal__content">
+          <span className="close" onClick={handleCloseProject}>&times;</span>
+          <h3>Add Skill</h3>
+          <form className="form" onSubmit={handleSubmit}>
+            <label htmlFor="skill-name">Project title:</label>
+            <input type="text" id="skill-name" name="title" onChange={handleChange} />
+            <label htmlFor="skill-name">Githb Link:</label>
+            <input type="text" id="skill-name" name="github" onChange={handleChange} />
+            <label htmlFor="skill-name">Live Demo link:</label>
+            <input type="text" id="skill-name" name="demo" onChange={handleChange} />
+            <label htmlFor="skill-name">Languages used:</label>
+            <input type="text" id="skill-name" name="languages" onChange={handleChange} />
+            <label htmlFor="skill-name"> Project Screenshot:</label>
+            <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
+            <button type="submit" className="btn">Add Skill</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </div></div>
-  )
-}
+  );
+};
 
-export default AddProject
+export default AddProject;
