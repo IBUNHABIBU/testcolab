@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { urlBase } from '../redux/actions/fetch';
 import { setUser } from '../redux/actions/actions';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const user = useSelector((state) => state.user);
@@ -42,21 +42,14 @@ const Login = () => {
   };
   return (
     <div>
-      {
-      user.logged_in
-      && (
-      <div className="login">
-        <h1 align="center">Login</h1>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="email">Email:</label>
-          <input type="text" id="email" name="email" onChange={handleChange} />
-          <label htmlFor="password">Password:</label>
-          <input type="text" id="password" name="password" onChange={handleChange} />
-          <button type="submit" className="btn">Login</button>
-        </form>
-      </div>
-      )
-      }
+      <h1 align="center">Login</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <label htmlFor="email">Email:</label>
+        <input type="text" id="email" name="email" onChange={handleChange} />
+        <label htmlFor="password">Password:</label>
+        <input type="text" id="password" name="password" onChange={handleChange} />
+        <button type="submit" className="btn">Login</button>
+      </form>
     </div>
   );
 };
