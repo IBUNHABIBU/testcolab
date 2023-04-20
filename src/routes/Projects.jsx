@@ -11,31 +11,35 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="project">
-
-      {
-        projects.map((project) => {
-          const {
-            id, title, github, demo, languages, imageUrl,
-          } = project;
-          return (
-            <div className="project__card" key={id}>
-              <img src={imageUrl} alt="title" className="project__image" />
-              <div className="project__details">
-                <h3 className="project__details__title">{title}</h3>
-                <div className="project__details__links">
-                  <a href={demo} target="_blank" className="btn link" rel="noreferrer">live demo</a>
-                  <a href={github} target="_blank" className="btn link" rel="noreferrer">github link</a>
+    <div className='project-container'>
+      
+      <h3>List of project</h3>
+          <p>All project are fetched from my backend api</p>
+      <div className="project">
+        {
+          projects.map((project) => {
+            const {
+              id, title, github, demo, languages, imageUrl,
+            } = project;
+            return (
+              <div className="project__card" key={id}>
+                <img src={imageUrl} alt="title" className="project__image" />
+                <div className="project__details">
+                  <h3 className="project__details__title">{title}</h3>
+                  <div className="project__details__links">
+                    <a href={demo} target="_blank" className="btn link" rel="noreferrer">live demo</a>
+                    <a href={github} target="_blank" className="btn link" rel="noreferrer">github link</a>
+                  </div>
+                  <p className="project__details__language">
+                    <strong>Built with: </strong>
+                    {languages}
+                  </p>
                 </div>
-                <p className="project__details__language">
-                  <strong>Built with: </strong>
-                  {languages}
-                </p>
               </div>
-            </div>
-          );
-        })
-}
+            );
+          })
+      }
+      </div>
     </div>
   );
 };

@@ -1,30 +1,16 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchSkills } from '../redux/actions/fetch';
+import React from 'react';
 
-const Skills = () => {
-  const skills = useSelector((state) => state.skills);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchSkills());
-  }, []);
-
-  return (
-    <div className="skills">
-      <h2 className="skills__title">Skills</h2>
-
-      <ul className="skills__list">
-        {
-        skills.map((skill) => {
-          const { id, title } = skill;
-          return (
-            <li className="skills__list__item" key={id}>{title}</li>
-          );
-        })
-      }
-      </ul>
-    </div>
-  );
-};
+const Skills = () => (
+  <div className="skills">
+    <h2 className="skills__title">Skills</h2>
+    <ul className="skills__list">
+      <li className="skills__list__item">HTML</li>
+      <li className="skills__list__item">CSS</li>
+      <li className="skills__list__item">JavaScript</li>
+      <li className="skills__list__item">React</li>
+      <li className="skills__list__item">Node.js</li>
+    </ul>
+  </div>
+);
 
 export default Skills;
