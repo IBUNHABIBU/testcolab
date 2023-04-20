@@ -11,10 +11,14 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className='project-container'>
-      
+    <div className="project-container">
+
       <h3>List of project</h3>
-          <p>All project are fetched from my backend api</p>
+      <p>
+        All project are fetched from
+        <a href="https://github.com/IBUNHABIBU/colabapi" target="_blank" rel="noreferrer">my backend api</a>
+      </p>
+
       <div className="project">
         {
           projects.map((project) => {
