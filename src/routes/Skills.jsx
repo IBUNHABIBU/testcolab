@@ -5,7 +5,6 @@ import { fetchSkills } from '../redux/actions/fetch';
 const Skills = () => {
   const skills = useSelector((state) => state.skills);
   const dispatch = useDispatch();
-  console.log(skills);
   useEffect(() => {
     dispatch(fetchSkills());
   }, []);
