@@ -6,7 +6,7 @@
 <br />
 
 <p align="center">
-  <a href="git@github.com:IBUNHABIBU/final-capstone.git">
+  <a href="git@github.com:IBUNHABIBU/testcolab.git">
     <p align="center">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/rails/rails.png" alt="Rails" width="100" height="100">
       <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React" width="100" height="100">
@@ -18,12 +18,12 @@
   <h3 align="center"> This is the personal porfolio site </h3>
 
   <p align="center">
-    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Report Bug</a>
-    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Request Feature</a>
+    <a href="https://github.com/IBUNHABIBU/testcolab/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/testcolab/issues">Request Feature</a>
   </p>
 </p>
 
-![screenshot](https://github.com/IBUNHABIBU/final-capstone/blob/dev/public/HomePage.PNG)
+![screenshot](https://github.com/IBUNHABIBU/testcolab/blob/dev/public/HomePage.PNG)
 
 ## Table of Contents
 
@@ -74,11 +74,11 @@ To run this locally, clone the repository, navigate to it's containing directory
 #### Follow these commands step by step:-
 
 `
- git@github.com:IBUNHABIBU/final-capstone.git
+ git@github.com:IBUNHABIBU/testcolab.git
 `
 
 `
-cd final-capstone
+cd testcolab
 `
 
  `$npm install `
@@ -109,7 +109,7 @@ Enjoy playing it.
 
 
 ## Live Demo
-[Live Demo ](salum-microverse-final-capstone.netlify.app)
+[Live Demo ](salum-microverse-testcolab.netlify.app)
 
 ## Challenges faced
 
@@ -127,7 +127,7 @@ It was hard to implement image upload due to the following reasons
 
  After deploying my api to linode server my front end was not showingup
  after inspecting the element I found the following error
- `r.js:187 Mixed Content: The page at 'https://salum-microverse-final-capstone.netlify.app/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://car.darlive.cyou/logged_in'. This request has been blocked; the content must be served over HTTPS.`
+ `r.js:187 Mixed Content: The page at 'https://salum-microverse-testcolab.netlify.app/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://car.darlive.cyou/logged_in'. This request has been blocked; the content must be served over HTTPS.`
  the solution is to use ssl certificate
 
 ## Authors
@@ -151,14 +151,14 @@ all my standup team for their help.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/final-capstone.svg?style=flat-square
-[contributors-url]: https://github.com/IBUNHABIBU/final-capstone/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/final-capstone.svg?style=flat-square
-[forks-url]: https://github.com/IBUNHABIBU/final-capstone/network/members
-[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/final-capstone.svg?style=flat-square
-[stars-url]: https://github.com/IBUNHABIBU/final-capstone/stargazers
-[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/final-capstone.svg?style=flat-square
-[issues-url]: https://github.com/IBUNHABIBU/final-capstone/issues
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/testcolab.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/testcolab/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/testcolab.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/testcolab/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/testcolab.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/testcolab/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/testcolab.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/testcolab/issues
 
 ## 📝 License
 
