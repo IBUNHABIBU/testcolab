@@ -16,7 +16,7 @@ const Projects = () => {
       <h3>List of project</h3>
       <p>
         All project are fetched from
-        <a href="https://github.com/IBUNHABIBU/colabapi" target="_blank" rel="noreferrer">my backend api</a>
+        <a href="https://github.com/IBUNHABIBU/colabapi" target="_blank" rel="noreferrer">  my backend api</a>
       </p>
 
       <div className="project">
