@@ -142,8 +142,9 @@ const Admin = () => {
             <label htmlFor="skill-name">Project title:
             <input type="text" id="skill-name" name="title" onChange={handleChange} />
             </label>
-            <label htmlFor="skill-name">Githb Link:</label>
+            <label htmlFor="skill-name">Githb Link:
             <input type="text" id="skill-name" name="github" onChange={handleChange} />
+            </label>
             <label htmlFor="skill-name">Live Demo link:</label>
             <input type="text" id="skill-name" name="demo" onChange={handleChange} />
             <label htmlFor="skill-name">Languages used:</label>
