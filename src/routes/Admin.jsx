@@ -98,7 +98,19 @@ const Admin = () => {
       {skillsModal && (
         <div className="modal">
           <div className="modal__content">
-            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <span
+              className="close"
+              onClick={handleCloseModal}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  handleClick();
+                }
+              }}
+              role="button"
+              tabIndex={0}
+            >
+              &times;
+            </span>
             <h3>Add Skill</h3>
             <form className="form" onSubmit={submitSkills}>
               <label htmlFor="skill-name" onChange={handleSkills}>Skill Name:</label>
