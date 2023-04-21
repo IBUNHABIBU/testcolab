@@ -13,6 +13,4 @@ const layout = (Component) => ({ ...props }) => (
     <Footer />
   </div>
 );
-
-layout.displayName = 'layout';
 export default layout;
