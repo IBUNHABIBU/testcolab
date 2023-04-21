@@ -49,7 +49,6 @@ const Login = () => {
           Email:
           <input type="text" id="email" name="email" onChange={handleChange} />
         </label>
-        <div className="form__control">
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" onChange={handleChange} />
         </div>
