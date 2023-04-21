@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     dispatch(fetchProjects());
-  }, []);
+  });
 
   return (
     <div className="project-container">
