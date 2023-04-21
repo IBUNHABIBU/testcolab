@@ -7,13 +7,12 @@ import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   if (user.logged_in) {
     navigate('/admin');
     return null;
   }
-
-  const dispatch = useDispatch();
   const [userInput, setuserInput] = useState({
     email: '',
     password: '',
