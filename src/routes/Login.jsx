@@ -10,6 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   if (user.logged_in) {
     navigate('/admin');
+    return null;
   }
 
   const dispatch = useDispatch();
