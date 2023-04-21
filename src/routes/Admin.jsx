@@ -124,16 +124,19 @@ const Admin = () => {
       {projectModal && (
       <div className="modal">
         <div className="modal__content">
-          <span className="close" 
-          onClick={handleCloseProject}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              handleClick();
-            }
-          }}
-          role="button"
-          tabIndex={0}
-          >&times;</span>
+          <span
+            className="close"
+            onClick={handleCloseProject}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleClick();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+          >
+            &times;
+          </span>
           <h3>Add Skill</h3>
           <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="skill-name">Project title:</label>
