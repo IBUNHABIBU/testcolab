@@ -9,14 +9,15 @@ const Login = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  if (user.logged_in) {
-    navigate('/admin');
-    return null;
-  }
   const [userInput, setuserInput] = useState({
     email: '',
     password: '',
   });
+  if (user.logged_in) {
+    navigate('/admin');
+    return null;
+  }
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
