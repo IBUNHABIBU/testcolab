@@ -45,10 +45,10 @@ const Login = () => {
     <div className="login">
       <h1>Login</h1>
       <form className="form" onSubmit={handleSubmit}>
-        <div className="form__control">
-          <label htmlFor="email">Email:</label>
+        <label htmlFor="email">
+          Email:
           <input type="text" id="email" name="email" onChange={handleChange} />
-        </div>
+        </label>
         <div className="form__control">
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" onChange={handleChange} />
