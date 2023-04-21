@@ -151,8 +151,9 @@ const Admin = () => {
               Live Demo link:
               <input type="text" id="skill-name" name="demo" onChange={handleChange} />
             </label>
-            <label htmlFor="skill-name">Languages used:
-            <input type="text" id="skill-name" name="languages" onChange={handleChange} />
+            <label htmlFor="skill-name">
+              Languages used:
+              <input type="text" id="skill-name" name="languages" onChange={handleChange} />
             </label>
             <label htmlFor="skill-name"> Project Screenshot:</label>
             <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
