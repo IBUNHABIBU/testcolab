@@ -139,11 +139,13 @@ const Admin = () => {
           </span>
           <h3>Add Skill</h3>
           <form className="form" onSubmit={handleSubmit}>
-            <label htmlFor="skill-name">Project title:
-            <input type="text" id="skill-name" name="title" onChange={handleChange} />
+            <label htmlFor="skill-name">
+              Project title:
+              <input type="text" id="skill-name" name="title" onChange={handleChange} />
             </label>
-            <label htmlFor="skill-name">Githb Link:
-            <input type="text" id="skill-name" name="github" onChange={handleChange} />
+            <label htmlFor="skill-name">
+              Githb Link:
+              <input type="text" id="skill-name" name="github" onChange={handleChange} />
             </label>
             <label htmlFor="skill-name">Live Demo link:</label>
             <input type="text" id="skill-name" name="demo" onChange={handleChange} />
