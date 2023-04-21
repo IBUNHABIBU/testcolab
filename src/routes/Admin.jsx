@@ -113,9 +113,10 @@ const Admin = () => {
             </span>
             <h3>Add Skill</h3>
             <form className="form" onSubmit={submitSkills}>
-              <label htmlFor="skill-name" onChange={handleSkills}>Skill Name:</label>
-              <input type="text" id="skill-name" name="skill-name" onChange={handleSkills} />
-
+              <label htmlFor="skill-name" onChange={handleSkills}>
+                Skill Name:
+                <input type="text" id="skill-name" name="skill-name" onChange={handleSkills} />
+              </label>
               <button type="submit" className="btn">Add Skill</button>
             </form>
           </div>
