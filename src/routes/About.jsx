@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { checkUser } from '../redux/actions/fetch';
+import React from 'react';
 
 const About = () => (
   <div className="about">
