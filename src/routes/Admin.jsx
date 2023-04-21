@@ -67,7 +67,6 @@ const Admin = () => {
       })
       .then((res) => {
         if (res.data.status === 'created') {
-          setMessage('Project added successfully');
           setProjectModal(false);
           dispatch(addProject(res.data));
         }
