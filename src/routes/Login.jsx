@@ -13,6 +13,7 @@ const Login = () => {
     email: '',
     password: '',
   });
+  
   if (user.logged_in) {
     navigate('/admin');
     return null;
