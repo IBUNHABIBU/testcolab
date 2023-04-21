@@ -42,8 +42,8 @@ const Login = () => {
     });
   };
   return (
-    <div>
-      <h1 align="center">Login</h1>
+    <div className='login'>
+      <h1>Login</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="email">Email:</label>
         <input type="text" id="email" name="email" onChange={handleChange} />
