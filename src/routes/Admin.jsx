@@ -124,7 +124,8 @@ const Admin = () => {
       {projectModal && (
       <div className="modal">
         <div className="modal__content">
-          <span className="close" onClick={handleCloseProject}>&times;</span>
+          <span className="close" onClick={handleCloseProject}
+          >&times;</span>
           <h3>Add Skill</h3>
           <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="skill-name">Project title:</label>
