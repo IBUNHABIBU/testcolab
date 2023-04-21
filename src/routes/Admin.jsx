@@ -155,9 +155,11 @@ const Admin = () => {
               Languages used:
               <input type="text" id="skill-name" name="languages" onChange={handleChange} />
             </label>
-            <label htmlFor="skill-name"> Project Screenshot:
-            <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
-            </label><button type="submit" className="btn">Add Skill</button>
+            <label htmlFor="skill-name">
+              Project Screenshot:
+              <input type="file" id="skill-name" name="screenshot" onChange={handleChange} />
+            </label>
+            <button type="submit" className="btn">Add Skill</button>
           </form>
         </div>
       </div>
